@@ -1,0 +1,558 @@
+#puzzle{
+    background-size: 100%;
+    position: relative;
+    height: 100%;
+    top: 00px;
+    float: left;
+}
+#divDessin{
+    position: relative;
+    top: 20%;
+    visibility: hidden;
+    left: 40%;
+}
+body{
+    zoom: 40%;
+    font-family: "Titan One" !important;
+}
+#map{
+    background-image: url('../img/lac.jpg');
+    background-size: 100% 125%;
+    background-repeat: no-repeat;
+}
+#formMap{
+    float: right;
+}
+#divPleinEcran{
+    position: fixed;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    visibility: hidden;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top: -71px;
+}
+#divPopUp{
+    position: absolute;
+    border-radius: 1em;
+    z-index: 1000;
+    display: none;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top: -71px;
+    top: 30%;
+    left: 33%;
+    background-color: black;
+    border-radius: 1em;
+    border: 4px solid red;
+    padding: 2%;
+    width: 45%;
+}
+.boutonPopUp{
+    cursor: pointer;
+    position: relative;
+
+    border: 1px solid black;
+    position: relative;
+    color: white;
+    padding: 1%;
+    transition: all 0.5s;
+
+}
+#postIt{
+    width: 32%;
+    height: 54%;
+    left: 34.5%;
+    position: relative;
+    font-family: cursive;
+    top: 24%;
+    rotate: -5deg;
+    font-size: 2vw;
+}
+.postit{
+    background-position: 64% 77%;
+    background-size:  156%;
+    background-repeat: no-repeat;
+    font-size: 0.5vw;
+    background-image: url('../img/postit.png');
+    width: 6%;
+    height: 27%;
+    font-family: cursive;
+    padding-top: 1%;
+    cursor: pointer;
+}
+.boutonPostit{
+    width : 50%;
+    left: 25%;
+    box-shadow : 0px 0px 2px 0px lightgreen;
+    background-color : green;
+    text-align : center;
+    margin-top: 10%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: white;
+    border: 1px solid black;
+}
+.boutonPostit:hover{
+    font-size: 24px;
+    transform: scale(110%);
+    border: 2px black dotted;
+}
+.boutonPostit:hover{
+    width : 50%;
+    left: 25%;
+    box-shadow : 0px 0px 2px 0px lightgreen;
+    background-color : green;
+    text-align : center;
+    margin-top: 10%;
+    position: relative;
+
+}
+.boutonPopUp:hover{
+    font-size: 24px;
+    transform: scale(110%);
+    border: 2px black dotted;
+}
+#nbInfluence{
+    animation: levelUp 1s ease-in-out infinite;
+}
+@keyframes levelUp{
+    33% {
+        transform: scale(2.5, 2.5); 
+    }
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+    66.67% {
+        transform: scale(0.7, 0.7);
+    }
+}
+#contenuPopUp{
+    position: relative;
+    top: 47%;
+    text-align: center;
+    color: wheat;
+    font-size: 24px;
+    height: 30%;
+}
+#contenuPopUp2{
+    position: relative;
+    top: 47%;
+    text-align: center;
+    color: wheat;
+    font-size: 24px;
+    height: 30%;
+}
+#contenuInfluencePopUp{
+   display: block ruby; 
+}
+.vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+  }
+  
+#boutonsDiv{
+    margin-top: 7%;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+    top: 33%;
+}
+#loading2{
+    position: fixed !important;
+    width: 53%;
+    height: 1%;
+    left: 26%;
+    top: 84%;
+    border-radius: 1em;
+}
+.progress-bar.indeterminate {
+    position: relative;
+    animation: progress-indeterminate 1s linear infinite;
+  }
+  
+  @keyframes progress-indeterminate {
+     from { left: -25%; width: 25%; }
+     to { left: 100%; width: 25%;}
+  }
+#title{
+    font-size: 7vw;
+    position: fixed;
+    left: 33%;
+    top: 65%;
+}
+#loader{
+    position: fixed;
+    inset: 0;
+    height: 219%;
+    width: 100%;
+    z-index: 1000;
+    background-color: greenyellow;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top: -71px;
+}
+
+body{
+    min-height: 100%;
+    background-color: black !important;
+}
+.puzzleSlot{
+    background-color: orange;
+    border: 1px solid black;
+}
+#biblio{
+    display: block;
+    padding-left: 2%;
+}
+.pages{
+
+    width: 34%;
+    height: 84%;
+    position: relative;
+    display: inline flow-root;
+    font-family: cursive;
+    font-size: 2vw;
+    top: 19%;
+    padding-left: 4%;
+
+
+}
+.artigo_nome {
+
+}
+#pageGauche{
+
+    left: 15%;
+    position: relative;
+    line-height: 1.4;
+
+}
+#pageDroite{
+
+    left: 20%;
+    position: relative;
+    line-height: 1.4;
+}
+.quitIcon{
+    visibility: hidden;
+    bottom: 91%;
+    width: 4%;
+    left: 96%;
+    z-index: 1001;
+    position: fixed;
+    background-size: 100% 100%;
+}
+.quitIcon:hover{
+    visibility: hidden;
+    bottom: 91%;
+    width: 4%;
+    left: 96%;
+    z-index: 1001;
+    position: fixed;
+    background-image: url('../img/quit0.png') !important;
+}
+#addIcon{
+    visibility: hidden;
+    bottom: 91%;
+    width: 4%;
+    left: 92%;
+    z-index: 1001;
+    position: fixed;
+}
+#pagePrevIcon{
+    visibility: hidden;
+    top: 86%;
+    width: 2%;
+    left: 17%;
+    z-index: 1001;
+    position: fixed;
+}
+#affichageSuccIcon{
+    width: 10%;
+    height: 10%;
+    left: 17%;
+}
+#affichagePrevIcon{
+    width: 10%;
+    height: 10%;
+    left: 17%;
+}
+#pageSuccIcon{
+    visibility: hidden;
+    top: 86%;
+    width: 2%;
+    left: 86%;
+    z-index: 1001;
+    position: fixed;
+}
+#validIcon{
+    width: 8%;
+    position: relative;
+    left: 46%;
+}
+#validIcon2{
+    width: 4%;
+    position: relative;
+    left: 92%;
+    top: 8.5%;
+}
+#validIcone2{
+    width: 8%;
+    position: relative;
+    visibility: hidden;
+    left: 46%;
+    top: 15%;
+}
+#eraseAllButton{
+    width : 50%;
+    right: 20%;
+    box-shadow : 0px 0px 2px 0px lightgreen;
+    background-color : orange;
+    text-align : center;
+    margin-top: 10%;
+    position: relative;
+}
+#casesReperes{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 10px;
+    height: 54%;
+}
+#divSearchCircle{
+    background-image: url("../img/searchCircle.png");
+    width: 33%;
+    height: 100%;
+    background-size: 75% 125%;
+    background-repeat: no-repeat;
+    background-position-x: 45%;
+    background-position-y: 30%;
+}
+#divSearchCircle:hover{
+    border: 2px solid cyan;
+}
+#divSearchDepouille{
+    background-image: url("../img/searchDepouille.png");
+    width: 33%;
+    height: 100%;
+    background-size: 53% 90%;
+    background-repeat: no-repeat;
+    background-position-x: 45%;
+    background-position-y: 30%;
+}
+#divSearchDepouille:hover{
+    border: 2px solid cyan;
+}
+
+#divCrayon{
+    background-image: url("../img/crayon.png");
+    width: 33%;
+    height: 100%;
+    background-size: 85% 125%;
+    background-position-x: 45%;
+    background-position-y: 30%;
+}
+#divCrayon:hover{
+    border: 2px solid cyan;
+}
+
+#caseRepere:hover{
+    cursor: pointer;
+    background-color: cyan;
+}
+#caseRepere{
+
+    display: inline-grid;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 1.5vw;
+    text-align: center;
+}
+#formCarte{
+    background-color: wheat;
+    width: 70%;
+    top: 7%;
+    left: 20%;
+    height: 80%;
+    position: relative;
+    right: 10%;
+    border-radius: 1em;
+    z-index: 1;
+    height: 80%;
+}
+#formCarteContenu{
+    height: 100%;
+    position: relative;
+
+}
+#divChoixDessin{
+    height: 20%;
+    display: block ruby;
+    top: 10%;
+    position: relative;
+}
+.carousel-indicators{
+    left: 5% !important;
+}
+#ordinateur{
+
+    width: 20%;
+    height: 100px;
+    position: relative;
+    left: 49%;
+    top: 27.4%;
+    height: 18%;
+    /* border: 4px aqua dotted; */
+    rotate: -1deg;
+}
+#ecran{
+    font-family: Arial, Helvetica, sans-serif !important;
+    width: 71.5%;
+    position: relative;
+
+    height: 72%;
+    background-image: url("../img/window0.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: auto;
+}
+#ordinateur:hover{
+    border: 4px aqua dotted;
+
+}
+#iconeMozila{
+    left: 3.5%;
+    width: 3%;
+    height: 13%;
+    position: relative;
+    background-size: 100% 100%;
+    background-image: url("../img/firefox.png");
+}
+#txtMozila{
+    color: white;
+    font-size: 0.8vw;
+    position: relative;
+    text-align: center;
+    position: relative;
+    left: 2%;
+    width: 6%;
+}
+
+#mozila{
+    padding-left: 1%;
+    height: 200px;
+}
+#iconeGoogle{
+    background-image: url("./img/google.png");
+    width: 20%;
+    height: 12.5%;
+    background-size: 100%;
+    bottom:5%;
+    position: relative;
+}
+.lien{
+    text-decoration : underline;
+    color: blue;
+    font-size: 32px;
+    position: relative;
+}
+.lien:hover{
+    cursor: pointer;
+    text-decoration : underline;
+}
+.lienVert{
+    color: green;
+    font-size: 24px;
+    position: relative;
+}
+.lienVert:hover{
+    text-decoration : underline;
+}
+#contenu{
+    font-size: 18px;
+}
+#url{
+    font-size: 20px;
+    top: 5px;
+    position: relative;
+    width: 95%;
+}
+#prev{
+    height: 44px;
+}
+
+#entete{
+    display: inline;
+}
+.description{
+    color: gray;
+    font-size: 24px;
+}
+body{
+    overflow-y: scroll;
+    scrollbar-color: #b4ccfc white;
+    scrollbar-width: thin;
+    scrollbar-arrow-color: #b4ccfc;
+    
+}
+#msgLoading{
+    position: relative;
+    top: 45%;
+    left: 39%;
+    font-size: 1.5vw;
+    color: cadetblue;
+}
+.mapIndice{
+    z-index: -1;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    left: 4%;
+    background-position: 36% 0%;
+    background-image: url('../img/lac.jpg');
+}
+.mapIndice:hover{
+    opacity: 100%;
+}
+.tabLiege{
+    background-image: url('../img/tabLiege.png');
+    width: 100%;
+    height: 50%;
+    position: relative;
+    left: 50%;
+    background-size: 52% 96%;
+    display: block ruby;
+}
+.dossiers{
+    position: relative;
+    background-image: url('../img/dossier.png');
+    background-repeat: no-repeat;
+    width: 56%;
+    height: 18%;
+    top: -9%;
+    position: relative;
+}
+#carteIndice{
+
+    background-repeat: no-repeat;
+
+    position: relative;
+    top: 4%;
+    height: 100%;
+    overflow: auto;
+
+}
+.dragRelative {
+	position:relative;
+	cursor:move;
+}

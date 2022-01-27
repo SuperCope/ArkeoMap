@@ -1,0 +1,35 @@
+<html>
+    <title>Passe points</title>
+    <head></head>
+    <header>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <link rel="stylesheet" href="css/cuteAlert.css" />
+    </header>
+    <main>
+        <body>
+
+                <fieldset id="formAuthentif">
+                    <h1 id="titreFormAuthentif">Inscription</h1>
+                    <label>Pseudo :</label>
+                    <input type="text" id="pseudoJoueur">
+                    <label>Mot de passe :</label>
+                    <input type="password" id="mdpJoueur">
+                    <button onclick="validFormInscription()" id="validForm">Valider</button>
+                </fieldset>
+                <button id="connexionBtn" onclick="initForm();document.getElementById('validForm').setAttribute('onclick','validFormAuthentif()'); ">Se connecter</button>
+
+        </body>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="utile.js" ></script>
+    <script src="bdd.js"></script>
+    <script src="objets/Partie.js"></script>
+    <script src="objets/Joueur.js"></script>
+    <script src="objets/Piece.js"></script>
+    <script src="authentif.js"></script>
+    <script src="alerts/cute-alert.js"></script>
+    <script>
+    </script>
+</html>

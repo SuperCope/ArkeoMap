@@ -1,0 +1,73 @@
+<div class="carousel-item active" style="display: flex;" id="map" data-interval="false">
+            <div style="width: 50%;">
+
+                <canvas id="puzzle" style="width: 100%;"></canvas>
+
+            </div>
+            <div style="width: 50%;">
+                <div id="formCarte">
+                    <div id="formCarteContenu">
+                        <div style="justify-content: space-between;display: flex;">
+                            <img src="img/pagePrev.png" id="affichagePrevIcon">
+                            <h1 style="text-align: center;">Affichage de la carte</h1>
+                            <img src="img/pageSucc.png" id="affichageSuccIcon">
+                        </div>
+                        <p>Choisissez le type de repère :</p>
+                        <div id="casesReperes">
+                            <div id="caseRepere" for="crevasse">
+                                <img src="img/crevasse.png" style="width: 28%;height: 100%;position: relative;left: 37%;">
+                                <input type="checkbox" id="crevasse" name="repereType">
+                                <label for="crevasse">Crevasse</label>
+                            </div>
+                            <div id="caseRepere" for="pont">
+                                <img src="img/pont.png" style="width: 28%;height: 100%;position: relative;left: 37%;">
+                                <input type="checkbox" id="pont" name="repereType"
+                                >
+                                <label for="pont">Pont</label>
+                            </div>
+                            <div id="caseRepere" for="tour">
+                                <img src="img/tour.png" style="width: 28%;height: 100%;position: relative;left: 37%;">
+                                <input type="checkbox" id="tour" name="repereType"
+                                >
+                                <label for="tour">Tour</label>
+                            </div>
+                            <div id="caseRepere" for="fort">
+                                <img src="img/fort.png" style="width: 28%;height: 100%;position: relative;left: 37%;">
+                                <input type="checkbox" id="fort" name="repereType"
+                                >
+                                <label for="fort">Fort</label>
+                            </div>
+                            <div id="caseRepere" for="grotte">
+                                <img src="img/grotte.png" style="width: 28%;height: 100%;position: relative;left: 37%;">
+                                <input type="checkbox" id="grotte" name="repereType"
+                                >
+                                <label for="grotte">Grotte</label>
+                            </div>
+                            <div id="caseRepere" for="cabanon">
+                                <img src="img/cabanon.png" style="width: 28%;height: 100%;position: relative;left: 37%;">
+                                <input type="checkbox" id="cabanon" name="repereType"
+                                >
+                                <label for="cabanon">Cabanon</label>
+                            </div>
+
+
+                        </div>
+                        <div style="display: block ruby;">
+                            <img src="img/searchCircle.png" style="position: relative;">
+                            <input type="checkbox" id="displaySearchCircles"
+                            >
+                            <label for="displaySearchCircles" style="font-size: 0.4vw;">Affichage des recherches effectuées</label>
+                        </div>
+                        <img src="img/valid.png" id="validIcon">
+                        <img src="img/valid.png" id="validIcone2">
+                    </div>
+                </div>
+
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+
+                <h1>Carte de l'île</h1>
+                <p>Aidez vous de cette carte pour consulter déduire les emplacements les plus appropriés pour démarrer
+                    des fouilles.</p>
+            </div>
+        </div>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
+    <title>Faraon</title>
+    <link rel="stylesheet" href="essaiText.css">
+    <link rel="stylesheet" href="css/puzzle.css">
+    <link rel="stylesheet" href="css/cuteAlert.css">
+    <link rel="stylesheet" href="css/move_redim.css"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            rel="stylesheet"
+    />
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css"
+            rel="stylesheet"
+    />
+    <script>
+        let mode = 0
+        let lancement = 0
+        let nbElements = 43
+        let nbE = 0
+        let nbSteps = 2
+
+        function begin() {
+            document.getElementById("loading22").style.animation = "none"
+        }
+
+        function end() {
+
+
+            document.getElementById("msgLoading").innerText = "Chargement de la page..."
+            document.getElementById("loading22").style.animation = "progress-indeterminate 1s linear infinite"
+            lancement = 1
+            
+        }
+
+        function percen(i, msg) {
+            let size = mode * (100 / nbSteps)
+            if (nbE == 0 || mode == 1) {
+                mode = 1
+                nbE++
+
+                document.getElementById("loading22").style.left = "0%"
+                document.getElementById("msgLoading").innerText = "Chargement des ressources..."
+                document.getElementById("loading22").style.width = ((nbE / nbElements) * size) + "%"
+
+            }
+            if (nbE == nbElements) {
+                document.getElementById("loading22").style.left = "0%"
+                document.getElementById("loading22").style.width = i + "%"
+                mode = 2
+            }
+            if (mode == 2) {
+                let size = mode * (100 / nbSteps)
+                document.getElementById("loading22").style.transition = "4s"
+                document.getElementById("loading22").style.width = (size) + "%"
+                document.getElementById("msgLoading").style.left = "42%"
+                document.getElementById("msgLoading").innerText = "Construction de la partie..."
+                setTimeout(function () {
+
+                    end()
+                }, 2000)
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+
+<header style="height: 0px;">
+    <img src="./img/crevasse.png" id="repere0" width="32" height="32" onload="begin()">
+    <img src="./img/pont.png" id="repere1" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/tour.png" id="repere2" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/fort.png" id="repere3" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/grotte.png" id="repere4" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/cabanon.png" id="repere5" width="32" height="32" onload="percen(event,'')">
+
+    <img src="./img/montagne2.png" id="image0" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/desert.png" id="image1" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/searchCircle.png" id="searchCircle" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/searchCircle2.png" id="searchCircle2" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/searchDepouille.png" id="searchDepouille" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/boussole.png" id="boussole" width="32" height="32" onload="percen(event,'')">
+    
+    <img src="./img/inaugu.png" id="inaugu" width="32" height="32" onload="percen(event,'')">
+
+    <img src="./img/pagePrev.png" id="image2" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/pagePrev0.png" id="image3" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/pageSucc.png" id="image4" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/pageSucc0.png" id="image5" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/add.png" id="image6" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/add0.png" id="image7" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/quit.png" id="image8" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/quit0.png" id="image9" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/boussole.png" id="image10" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/firefox.png" id="image11" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/livre.png" id="image12" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/livre0.png" id="image13" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/livre1.png" id="image14" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/livre2.png" id="image15" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/livre3.png" id="image16" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/livre4.png" id="image17" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/livre5.png" id="image18" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/ordi.png" id="image19" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/valid.png" id="image20" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/valid0.png" id="image21" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/window0.png" id="image22" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/windows.png" id="image23" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/cursor.png" id="image24" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/biblio.png" id="image25" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/biblio2.png" id="image26" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/dossier.png" id="image27" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/google.png" id="image28" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/prev.png" id="image29" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/montagne.png" id="image30" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/epees.png" id="image31" width="32" height="32" onload="percen(event,'')">
+
+    <img src="./img/searchRepere|crevasse.png" id="searchRepere|crevasse" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/searchRepere|pont.png" id="searchRepere|pont" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/searchRepere|tour.png" id="searchRepere|tour" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/searchRepere|fort.png" id="searchRepere|fort" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/searchRepere|grotte.png" id="searchRepere|grotte" width="32" height="32" onload="percen(event,'')">
+    <img src="./img/searchRepere|cabanon.png" id="searchRepere|cabanon" width="32" height="32" onload="percen(event,'')">
+
+</header>
+
+<div id="infosJeu" style="display: block ruby;">
+    <div id="argentDiv" style="color: white;display: block ruby;">
+        <img src="img/euro.png" width="50px" height="50px">
+        <div id="argent">----</div>
+    </div>
+    <div id="influenceDiv" style="color: white;display: block ruby;">
+        <img src="img/influence.png" width="50px" height="50px">
+        <div id="influence">----</div>
+    </div>
+</div>
+<div
+        id="carouselBasicExample"
+        class="carousel slide"
+        data-mdb-ride="carousel"
+        data-mdb-interval="false"
+        style="min-height: 100%"
+>
+
+    <div class="carousel-indicators" style="margin-left: -5%;margin-right: 0%;">
+        <button
+                type="button"
+                data-mdb-target="#carouselBasicExample"
+                data-mdb-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+        ></button>
+        <button
+                type="button"
+                data-mdb-target="#carouselBasicExample"
+                data-mdb-slide-to="1"
+                aria-label="Slide 2"
+        ></button>
+        <button
+                type="button"
+                data-mdb-target="#carouselBasicExample"
+                data-mdb-slide-to="2"
+                aria-label="Slide 3"
+        ></button>
+    </div>
+
+    <div class="carousel-inner">
+        <!-- Single item -->
+        <div class="carousel-item active"  data-interval="false">
+            <div style="display: flex;" id="map">
+                <div style="width: 50%;">
+
+                    <canvas id="puzzle" style="width: 100%;"></canvas>
+
+                </div>
+                <div style="width: 50%;">
+                    <div id="formCarte">
+                        <div style="justify-content: space-between;display: flex;">
+                            <img src="img/pagePrev.png" id="affichagePrevIcon">
+                            <h1 style="text-align: center;" id="titreFormCarte">Undefined</h1>
+                            <img src="img/pageSucc.png" id="affichageSuccIcon">
+                        </div>
+                        
+
+                        <img src="img/valid.png" id="validIcon">
+                        <img src="img/valid.png" id="validIcone2">
+                    </div>
+
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+
+                    <h1>Carte de l'île</h1>
+                    <p>Aidez vous de cette carte pour consulter déduire les emplacements les plus appropriés pour démarrer
+                        des fouilles.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item" id="bibliotheque">
+            <div id="biblio"
+                 style="height: 1000px;background-image: url('./img/biblio.png');background-size: 100% 95%;background-repeat: no-repeat;">
+                <div id="ordinateur">
+
+                </div>
+            </div>
+
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Bibliothèque</h1>
+                <p>Consultez les ouvrages</p>
+            </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item" style="height: 1000px;">
+            <div id="biblio2"
+                 style="height: 1000px;background-image: url('./img/biblio2.png');background-size: 100% 95%;background-repeat: no-repeat;">
+
+                <div id="tabLiege" class="tabLiege">
+
+                </div>
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Bibliothèque</h5>
+                <p>Consultez les cartes mises à votre disposition.</p>
+            </div>
+        </div>
+    </div>
+    <button
+            class="carousel-control-prev"
+            type="button"
+            data-mdb-target="#carouselBasicExample"
+            data-mdb-slide="prev"
+            style="color: red;width: 30px;"
+    >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+            class="carousel-control-next"
+            type="button"
+            data-mdb-target="#carouselBasicExample"
+            data-mdb-slide="next"
+            style="color: red;width: 30px;"
+    >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    <img src="img/quit.png" id="quitIcon">
+    <img src="img/add.png" id="addIcon">
+    <div id="divPleinEcran">
+
+    </div>
+    <div id="divPopUp">
+
+    </div>
+    <div id="loader">
+        <h1 id="title">ArkeoMap</h1>
+        <div id="msgLoading">En attente d'une réponse du serveur...</div>
+        <div class="progress" style="position: relative;" id="loading2">
+            <div id="loading22" class="progress-bar progress-bar-striped indeterminate"></div>
+        </div>
+    </div>
+    <img src="img/pagePrev.png" id="pagePrevIcon">
+    <img src="img/pageSucc.png" id="pageSuccIcon" >
+</div>
+<footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-2.0.1.min.js"></script>
+    <script src="./objets/Partie.js"></script>
+    <script src="./objets/Joueur.js"></script>
+    <script src="./objets/Piece.js"></script>
+    <script src="./utile.js"></script>
+    <script src="./mapGenerator.js"></script>
+    <script src="./draw.js"></script>
+    <script src="interfaceGraphique.js"></script>
+    <script src="./game.js"></script>
+    <script src="./indiceGenerator.js"></script>
+    <script src="./authentif.js"></script>
+    <script src="./alerts/cute-alert.js"></script>
+    <script src="./textStyle.js"></script>
+
+    <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.js"
+    ></script>
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</footer>
+</body>
+
+</html>
+
